@@ -10,8 +10,20 @@ body {
     box-sizing: border-box;
 }
 
+button, input {
+    font-family: inherit
+}
+
 ul li {
     list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .main-container {
@@ -25,6 +37,7 @@ ul li {
 header {
     display: grid;
     grid-template-rows: auto auto;
+    padding: 0px 32px;
 }
 
 .header-bar {
@@ -32,15 +45,12 @@ header {
     grid-template-columns: 3fr 1fr;
 }
 
-.header-bar > div {
-    
-}
 
 .header-search-bar {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 18px 32px;
+    padding: 18px 0px;
 }
 
 .header-search-bar input {
@@ -49,6 +59,7 @@ header {
     outline-style: none;
     border-radius: 12px;
     flex: 1;
+    font-size: 1rem;
     padding: 8px 12px;
     max-width: 600px;
 }
@@ -56,14 +67,70 @@ header {
 .header-user-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-right: 100px;
-    gap: 24px;
+    justify-content: space-evenly;
     padding: 18px 32px;
+}
+
+.username {
+    font-size: 1.2rem;;
 }
 
 .user-avatar {
     border-radius: 50%;
+}
+
+.header-navbar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 0 0 16px 0;
+}
+
+.user-greeting {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.greeting-text {
+    padding: 8px;
+}
+
+.greeting-small {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.greeting-details {
+    font-size: 1.5rem;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-button {
+    background-color: var(--sidebar-bg-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 35px;
+    min-width: 120px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease
+}
+
+.header-button:hover {
+    transform: translateY(-3px);
+}
+
+.header-button:active {
+    transform: translateY(1px);
 }
 
 aside {
