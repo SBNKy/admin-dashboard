@@ -10,6 +10,10 @@ body {
     box-sizing: border-box;
 }
 
+ul li {
+    list-style-type: none;
+}
+
 .main-container {
     height: 100vh;
     display: grid;
@@ -19,7 +23,47 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-rows: auto auto;
+}
 
+.header-bar {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.header-bar > div {
+    
+}
+
+.header-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 32px;
+}
+
+.header-search-bar input {
+    background-color: var(--main-bg-color);
+    border: none;
+    outline-style: none;
+    border-radius: 12px;
+    flex: 1;
+    padding: 8px 12px;
+    max-width: 600px;
+}
+
+.header-user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
+    gap: 24px;
+    padding: 18px 32px;
+}
+
+.user-avatar {
+    border-radius: 50%;
 }
 
 aside {
