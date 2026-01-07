@@ -67,7 +67,7 @@ header {
     border-radius: 12px;
     flex: 1;
     font-size: 1rem;
-    padding: 8px 12px;
+    padding: 8px 6px;
     max-width: 600px;
 }
 
@@ -143,27 +143,32 @@ header {
 main {
     background-color: var(--main-bg-color);
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    padding: 20px 24px;
+    grid-template-columns: 5fr 2fr;
+    gap: 24px;
+    padding: 20px 32px;
 }
 
-.project-text {
+.project-text, .announcement-text, .trending-text {
     font-size: 1.4rem;
     font-weight: 500;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 24px;
-    padding: 12px 0;
+    margin-top: 12px;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card {
-    box-sizing: border-box;
-    background-color: white;
     border-left: 10px solid var(--card-border-color);
-    border-radius: 8px;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -181,9 +186,47 @@ main {
 
 .card-icons {
     margin-top: auto;
+    margin-right: 16px;
     display: flex;
     justify-content: flex-end;
     gap: 24px;
+}
+
+.column-container {
+    margin-top: 12px;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 24px
+}
+
+.announcement-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    gap: 24px;
+    padding: 20px 32px;
+}
+
+.announcement {
+    border-bottom: 1px solid lightgray;
+    padding: 16px 0;
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+.announcement-title {
+    font-weight: 600;
+}
+
+.announcement-description {
+    margin-top: 6px;
+    line-height: 1.2;
+}
+
+.trending-container {
+
 }
 
 aside {
