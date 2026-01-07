@@ -237,7 +237,7 @@ main {
     display: grid;
     grid-template-rows: repeat(auto, 4);
     min-height: 350px;
-    padding: 16px 24px;;
+    padding: 16px 24px;
 }
 
 .trending-user {
@@ -259,4 +259,43 @@ main {
 aside {
     background-color: var(--sidebar-bg-color);
     grid-area: 1 / 1 / 3 / 2;
+    padding: 10px 16px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-header span {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 24px;
+}
+
+.sidebar-links ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar-link span {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
 }
